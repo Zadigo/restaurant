@@ -4,7 +4,7 @@
       <base-navbar />
     </header> -->
 
-    <div class="grid grid-cols-12 gap-2">
+    <div class="grid grid-cols-12 gap-2 h-screen">
       <div class="col-span-2 relative overflow-hidden">
         <base-sidebar />
       </div>
@@ -27,10 +27,10 @@
 
 <script lang="ts" setup>
 onMounted(() => {
-  document.body.classList.add('bg-slate-100')
+  document.body.classList.add('bg-brand-50', 'dark:bg-brand-800' )
 })
 
 onUnmounted(() => {
-  document.body.classList.remove('bg-slate-100')
+  document.body.classList.remove('bg-brand-50', 'dark:bg-brand-800' )
 })
 </script>

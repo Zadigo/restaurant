@@ -25,10 +25,15 @@ export const useCart = createSharedComposable(<I = unknown>() => {
     newCartItem.menu_options = {}
   }
 
+  function empty() {
+    cart.value.items = []
+  }
+
   return {
     cart,
     newCartItem,
     reset,
+    empty,
     add
   }
 })

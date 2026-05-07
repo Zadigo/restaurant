@@ -4,7 +4,7 @@
       Menu
     </div>
 
-    <div class="grid grid-cols-6 gap-2">
+    <div class="grid grid-cols-4 gap-2">
       <slot name="items" :items="availableMenus">
         <article v-for="item in availableMenus" :key="item.id">
           <slot name="item" :item="item">
@@ -34,6 +34,5 @@
 import type { RestaurantMenu } from '~/types'
 import { availableMenus } from '~/data/__fixtures__/index'
 
-// defineProps<{ availableMenus: Array<RestaurantMenu> }>()
 const emit =defineEmits<{ 'select': [item: RestaurantMenu] }>()
 </script>

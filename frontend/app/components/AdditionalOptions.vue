@@ -7,7 +7,8 @@
       </h4>
 
       <!-- Choices -->
-      <nuxt-radio-group v-if="customOption.single_choice" v-model="newCartItem.menu_options[customOption.name]" :items="customOption.choices" label-key="name" />
+      {{ customOption.choices }}
+      <nuxt-radio-group v-if="customOption.single_choice" v-model="newCartItem.menu_options.drink" :items="customOption.choices" label-key="name" value-key="name" />
       <template v-else>
         <div v-for="choice in customOption.choices" :key="choice.name" class="my-2">
           <nuxt-checkbox v-model="newCartItem.menu_options.custom_options" :label="choice.name" />

@@ -58,14 +58,7 @@
         </div>
 
         <div class="col-span-4 py-2 mb-10">
-          <nuxt-card>
-            <template #header>
-              <h3 class="font-bold">Votre panier</h3>
-              <p class="text-muted">1 article · 15,90 €</p>
-            </template>
-
-            {{ cart }}
-          </nuxt-card>
+          <cart-iterator />
         </div>
       </div>
     </div>
